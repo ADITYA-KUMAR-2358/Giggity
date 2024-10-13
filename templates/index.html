@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giggity</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Giggity</h1>
+        <div class="chat-box" id="chat-box">
+            <div id="messages" class="messages"></div>
+        </div>
+        <input type="text" id="username" placeholder="Enter your username" />
+        <div class="chat-input-container">
+         <input type="text" id="messageInput" placeholder="Type a message..." />
+         <button id="sendButton">Send</button>
+         <div id="messages"></div>
+          </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
