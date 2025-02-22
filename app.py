@@ -1,7 +1,6 @@
 import firebase_admin
 from firebase_admin import credentials, db
 from flask import Flask, render_template, request, jsonify
-import threading
 
 # Initializing Firebase
 cred = credentials.Certificate("C:\\Users\\ADITYA KUMAR\\Desktop\\Giggity\\giggity-71b03-firebase-adminsdk-j3bsh-920cf79023.json")
@@ -27,7 +26,7 @@ def fetch_messages():
 # Function to clear the chat history
 def clear_chat_history():
     ref = db.reference('messages')
-    ref.delete()  # This deletes all messages under the 'messages' reference in Firebase
+    ref.delete()  # Deletes all messages under the 'messages' reference in Firebase
 
 # HTML route
 @app.route('/')
@@ -53,10 +52,6 @@ def clear_history():
     clear_chat_history()
     return jsonify({"status": "Chat history cleared!"})
 
-# Entry point for Cloud Functions
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080)
-
-
+# Run the Flask app
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=8080)
