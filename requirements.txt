@@ -76,7 +76,6 @@ svg.path==6.3
 svgpathtools==1.6.1
 svgwrite==1.4.3
 tqdm==4.66.2
-turtle==0.0.1
 typing_extensions==4.12.2
 uritemplate==4.1.1
 urllib3==2.2.1
